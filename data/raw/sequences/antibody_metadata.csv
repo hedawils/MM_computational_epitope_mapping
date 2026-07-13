@@ -21,11 +21,11 @@ HW-56,HC,GARS,chimeric rabbit/human IgG1,467,448,yes
 HW-56,LC,GARS,chimeric rabbit/human kappa,233,214,n/a
 HW-70,HC,PTPRG,chimeric rabbit/human IgG1,462,443,yes
 HW-70,LC,PTPRG,chimeric rabbit/human lambda,236,217,n/a
-HW-8,HC,TBD,chimeric rabbit/human IgG1,459,440,yes
-HW-8,LC,TBD,chimeric rabbit/human kappa,232,213,n/a
+HW-8,HC,unknown,chimeric rabbit/human IgG1,459,440,yes
+HW-8,LC,unknown,chimeric rabbit/human kappa,232,213,n/a
 HW-81,HC,GARS,chimeric rabbit/human IgG1,464,445,yes
 HW-81,LC,GARS,chimeric rabbit/human lambda,238,219,n/a
 HW-97,HC,CADM1,chimeric rabbit/human IgG1,465,446,yes
 HW-97,LC,CADM1,chimeric rabbit/human lambda,236,217,n/a
-TH9-022,HC,TBD,chimeric rabbit/human IgG1,471,452,yes
-TH9-022,LC,TBD,chimeric rabbit/human kappa,233,214,n/a
+TH9-022,HC,NA,chimeric rabbit/human IgG1,471,452,yes
+TH9-022,LC,NA,chimeric rabbit/human kappa,233,214,n/a

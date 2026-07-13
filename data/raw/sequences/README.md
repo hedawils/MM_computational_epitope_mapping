@@ -26,8 +26,8 @@ match the pasted data; flagged here rather than silently dropped).
 author-provided clone/target table (PTPRG, GARS, CADM1, ICAM1). Cross-checked
 against light-chain isotype (kappa vs lambda) shown in that table, which matched
 the isotype implied by each LC sequence's C-terminal residues (`...FNRGEC` = kappa,
-`...TVAPTECS` = lambda) for all 15 clones. **HW-8 and TH9-022 targets are still
-`TBD`** — cropped out of the source screenshot; update once confirmed.
+`...TVAPTECS` = lambda) for all 15 clones. HW-8's target is `unknown`; TH9-022 has
+no assigned target (`NA`).
 
 ## Signal peptide
 

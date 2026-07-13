@@ -19,7 +19,7 @@ METADATA_CSV = ROOT / "data/raw/sequences/antibody_metadata.csv"
 SIGNAL_PEPTIDE = "MDWTWRILFLVAAATGAHS"  # 19 aa, shared across all constructs
 
 # Target antigen per clone, from author-provided clone/target table.
-# HW-8 and TH9-022 not yet confirmed (cropped in source screenshot).
+# HW-8 target is unknown; TH9-022 has no assigned target (NA).
 TARGETS = {
     "HW-42": "PTPRG",
     "HW-70": "PTPRG",
@@ -34,8 +34,8 @@ TARGETS = {
     "HW-97": "CADM1",
     "HW-101": "CADM1",
     "HW-113": "ICAM1",
-    "HW-8": "TBD",
-    "TH9-022": "TBD",
+    "HW-8": "unknown",
+    "TH9-022": "NA",
 }
 
 LC_ISOTYPE_SUFFIX = {
