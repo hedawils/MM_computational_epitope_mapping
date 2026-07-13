@@ -1,0 +1,8 @@
+Sequence similarity summary
+========================================
+
+[VH] Mean %identity, same-target pairs: 71.0 (n=21)
+[VH] Mean %identity, different-target pairs: 70.0 (n=57)
+
+[VL] Mean %identity, same-target pairs: 76.0 (n=21)
+[VL] Mean %identity, different-target pairs: 75.0 (n=57)
