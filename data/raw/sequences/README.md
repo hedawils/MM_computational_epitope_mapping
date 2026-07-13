@@ -22,10 +22,12 @@ HW-1, HW-8, HW-16, HW-17, HW-25, HW-28, HW-42, HW-45, HW-56, HW-70, HW-81, HW-97
 HW-101, HW-113, TH9-022 (15 clones total — the user's original count of 12 did not
 match the pasted data; flagged here rather than silently dropped).
 
-**Target antigen assignment (PTPRG / ICAM1 / CADM1) is not yet recorded per clone.**
-An earlier screenshot of a VH/VL CDR table listed targets, but the image resolution
-was too low to transcribe reliably. Fill in `target_antigen` in
-`antibody_metadata.csv` once confirmed.
+**Target antigens** (`target_antigen` in `antibody_metadata.csv`) are from an
+author-provided clone/target table (PTPRG, GARS, CADM1, ICAM1). Cross-checked
+against light-chain isotype (kappa vs lambda) shown in that table, which matched
+the isotype implied by each LC sequence's C-terminal residues (`...FNRGEC` = kappa,
+`...TVAPTECS` = lambda) for all 15 clones. **HW-8 and TH9-022 targets are still
+`TBD`** — cropped out of the source screenshot; update once confirmed.
 
 ## Signal peptide
 

@@ -18,6 +18,31 @@ METADATA_CSV = ROOT / "data/raw/sequences/antibody_metadata.csv"
 
 SIGNAL_PEPTIDE = "MDWTWRILFLVAAATGAHS"  # 19 aa, shared across all constructs
 
+# Target antigen per clone, from author-provided clone/target table.
+# HW-8 and TH9-022 not yet confirmed (cropped in source screenshot).
+TARGETS = {
+    "HW-42": "PTPRG",
+    "HW-70": "PTPRG",
+    "HW-25": "PTPRG",
+    "HW-1": "PTPRG",
+    "HW-17": "PTPRG",
+    "HW-16": "GARS",
+    "HW-45": "GARS",
+    "HW-28": "GARS",
+    "HW-56": "GARS",
+    "HW-81": "GARS",
+    "HW-97": "CADM1",
+    "HW-101": "CADM1",
+    "HW-113": "ICAM1",
+    "HW-8": "TBD",
+    "TH9-022": "TBD",
+}
+
+LC_ISOTYPE_SUFFIX = {
+    "GEC": "kappa",
+    "ECS": "lambda",
+}
+
 
 def parse_fasta(path):
     records = {}
@@ -62,15 +87,20 @@ def main():
 
         for clone in sorted(clones):
             chains = clones[clone]
+            target = TARGETS.get(clone, "TBD")
             for chain in ("HC", "LC"):
                 if chain not in chains:
                     continue
                 full = chains[chain]["full"]
                 mature = chains[chain]["mature"]
                 mature_fasta.write(f">{clone}_{chain}\n{mature}\n")
+                if chain == "HC":
+                    isotype = "chimeric rabbit/human IgG1"
+                else:
+                    lc_class = LC_ISOTYPE_SUFFIX.get(full[-3:], "unknown")
+                    isotype = f"chimeric rabbit/human {lc_class}"
                 meta_writer.writerow([
-                    clone, chain, "TBD",
-                    "chimeric rabbit/human IgG1" if chain == "HC" else "chimeric rabbit/human (kappa/lambda)",
+                    clone, chain, target, isotype,
                     len(full), len(mature),
                     "yes" if chain == "HC" else "n/a",
                 ])
