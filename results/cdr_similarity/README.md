@@ -54,3 +54,20 @@ Same-target clones are somewhat more CDR-similar than different-target clones,
 as expected once framework identity is removed from the comparison — but the
 overlap is still large, so CDR similarity alone would not reliably predict
 target antigen for this panel.
+
+## CDR3-only clustering + alignment panel + germline annotation
+
+[../../scripts/plot_cdr_dendrogram_with_alignment.py](../../scripts/plot_cdr_dendrogram_with_alignment.py)
+produces a second, complementary view restricted to **CDR3 alone** (the most
+diagnostic loop for antigen specificity), with the actual MAFFT-aligned CDR3
+sequences shown alongside the dendrogram:
+
+- `cdr3_dendrogram_alignment_VH.png`, `cdr3_dendrogram_alignment_VL.png`
+- Leaf labels colored by target antigen (see legend in each figure)
+- VH labels additionally annotated with the closest-matching rabbit IGHV
+  germline gene — see [../germline/README.md](../germline/README.md)
+- CDR3 loops per chain aligned independently with MAFFT (L-INS-i); aligned
+  FASTA in [../../data/processed/cdr_alignments/](../../data/processed/cdr_alignments/)
+- Clustering (linkage) here is computed on CDR3-only BLOSUM62 identity, not the
+  CDR1+2+3 concatenation used for `cdr_dendrogram_VH.png`/`cdr_dendrogram_VL.png`
+  above — the two dendrograms are not expected to be identical

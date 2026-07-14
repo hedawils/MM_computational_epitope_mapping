@@ -12,3 +12,12 @@ venv/
 *.pt
 *.pkl
 !structures/reference/.gitkeep
+
+# BLAST database build artifacts (regenerate via makeblastdb)
+*.phr
+*.pin
+*.pjs
+*.pot
+*.psq
+*.ptf
+*.pto
